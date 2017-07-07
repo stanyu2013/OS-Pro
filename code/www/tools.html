@@ -1,101 +1,69 @@
-<!-- <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8" />
-        <meta name="format-detection" content="telephone=no" />
-        <meta name="msapplication-tap-highlight" content="no" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1, user-scalable=0" />
-        <script type="text/javascript" src="cordova.js"></script>
-        <script type="text/javascript" src="js/index.js"></script>
-        <script src="app/lib/onsen/js/angular/angular.js"></script>
-        <script src="app/lib/onsen/js/onsenui.js"></script>
-        <script>
-            ons.bootstrap();
-        </script>
-        <link rel="stylesheet" href="app/lib/onsen/css/onsenui.css">
-        <link rel="stylesheet" href="app/lib/onsen/css/onsen-css-components-blue-basic-theme.css">
-        <link rel="stylesheet" href="app/login.css">
-        <title>OS-Pro Tools</title>
-        <style>
-            a {
-                color: #000;
-                text-decoration: none;
-            }
+<ons-page>
+    <ons-toolbar>
+        <div class="left">
+            <ons-back-button>
+                <!-- <a href="index.html"> -->
+                Back
+                <!-- </a> -->
+            </ons-back-button>
+        </div>
+        <div class="center">OS-Pro Tools</div>
+        <div class="right"><ons-toolbar-button>Exit</ons-toolbar-button></div>
+    </ons-toolbar>
 
-            img {
-                display: block;
-                margin: 0 auto;
-            }
-        </style>
-    </head>
-    <body class="tools"> -->
-    <!--<ons-navigator title="Navigator" var="myNavigator">-->
-        <ons-page>
-            <ons-toolbar>
-                <div class="left">
-                    <ons-back-button>
-                        <!-- <a href="index.html"> -->
-                        Back
-                        <!-- </a> -->
-                    </ons-back-button>
-                </div>
-                <div class="center">OS-Pro Tools</div>
-                <div class="right"><ons-toolbar-button>Exit</ons-toolbar-button></div>
-            </ons-toolbar>
+    <ons-row style="margin-top:45px; margin-bottom:45px;">
+        <ons-col><img src="img/logo.png" width="120px" height="120px"></ons-col>
+    </ons-row>
 
-            <ons-row style="margin-top:45px; margin-bottom:45px;">
-                <ons-col><img src="img/logo.png" width="120px" height="120px"></ons-col>
-            </ons-row>
-
-            <ons-list>
-                <ons-list-header>Patient Tools</ons-list-header>
-                <ons-list-item modifier="chevron" onclick="myNavigator.pushPage('cleft_patients.html', { animation : 'slide', test: 'test Parameter' });getPatients();">
-                <!--<ons-list-item modifier="chevron">-->
-                <!--<a href="cleft-patients.html">-->
-                    All Patients
-                <!--</a>-->
-                </ons-list-item>
-                <!--</ons-list-item>-->
+    <ons-list>
+        <ons-list-header>Patient Tools</ons-list-header>
+        <ons-list-item modifier="chevron" onclick="myNavigator.pushPage('cleft_patients.html', { animation : 'slide', test: 'test Parameter' });getPatients();">
+        <!--<ons-list-item modifier="chevron">-->
+        <!--<a href="cleft-patients.html">-->
+            All Patients
+        <!--</a>-->
+        </ons-list-item>
+        <!--</ons-list-item>-->
 
 
-                <!--<ons-list-item modifier="chevron">-->
-                <ons-list-item modifier="chevron" onclick="myNavigator.pushPage('register.html')">
-                <!--<a href="register.html">-->
-                    Register a Patient
-                <!--</a>-->
-                </ons-list-item>
+        <!--<ons-list-item modifier="chevron">-->
+        <ons-list-item modifier="chevron" onclick="myNavigator.pushPage('register.html')">
+        <!--<a href="register.html">-->
+            Register a Patient
+        <!--</a>-->
+        </ons-list-item>
 
-             <!--    <ons-list-item modifier="chevron">
-                <a href="cam.html"> -->
-                <ons-list-item modifier="chevron" onclick="myNavigator.pushPage('cam.html', {animation: 'slide'})">
-                    Post Surgical Follow-up
-                </ons-list-item>
-                <!-- </a>
-                </ons-list-item> -->
+     <!--    <ons-list-item modifier="chevron">
+        <a href="cam.html"> -->
+        <ons-list-item modifier="chevron" onclick="myNavigator.pushPage('cam.html', {animation: 'slide'})">
+            Post Surgical Follow-up
+        </ons-list-item>
+        <!-- </a>
+        </ons-list-item> -->
 
 <!-- 
-                <ons-list-item modifier="chevron"> -->
-                <ons-list-item modifier="chevron" onclick="myNavigator.pushPage('geo.html', {animation: 'slide'})">
-                <!-- <a href="geo.html"> -->
-                    Geolocation
-               <!--  </a> -->
-                </ons-list-item>
+        <ons-list-item modifier="chevron"> -->
+        <ons-list-item modifier="chevron" onclick="myNavigator.pushPage('geo.html', {animation: 'slide'})">
+        <!-- <a href="geo.html"> -->
+            Geolocation
+       <!--  </a> -->
+        </ons-list-item>
 
-                <!-- <ons-list-item modifier="chevron"> -->
-                    <ons-list-item modifier="chevron" onclick="myNavigator.pushPage('UploadPatient.html', {animation: 'slide'})">
-                    <!-- <a href="upload-patient.html"> -->
-                        Upload Patient
-                    <!-- </a> -->
-                </ons-list-item>
-                <!--<ons-list-header>Facility Tools</ons-list-header>
-                <ons-list-item modifier="chevron" onclick="myNavigator.pushPage('pipes.html', {animation: 'slide'})">
-                    PIPES Surgical Assessment (Part 1)
-                </ons-list-item>
-                <ons-list-item modifier="chevron" onclick="myNavigator.pushPage('pipes.html', {animation: 'slide'})">
-                    PIPES Surgical Assessment (Part 2)
-                </ons-list-item>-->
-            </ons-list>
-        </ons-page>
-    <!--</ons-navigator>-->
-    <!--</body>-->
+        <!-- <ons-list-item modifier="chevron"> -->
+            <ons-list-item modifier="chevron" onclick="myNavigator.pushPage('UploadPatient.html', {animation: 'slide'})">
+            <!-- <a href="upload-patient.html"> -->
+                Upload Patient
+            <!-- </a> -->
+        </ons-list-item>
+        <!--<ons-list-header>Facility Tools</ons-list-header>
+        <ons-list-item modifier="chevron" onclick="myNavigator.pushPage('pipes.html', {animation: 'slide'})">
+            PIPES Surgical Assessment (Part 1)
+        </ons-list-item>
+        <ons-list-item modifier="chevron" onclick="myNavigator.pushPage('pipes.html', {animation: 'slide'})">
+            PIPES Surgical Assessment (Part 2)
+        </ons-list-item>-->
+    </ons-list>
+</ons-page>
+<!--</ons-navigator>-->
+<!--</body>-->
 <!--</html>-->
