@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<!--<meta http-equiv="Content-Security-Policy" content="default-src *; style-src * 'unsafe-inline'; script-src * 'unsafe-inline'; media src *" />-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, target-densitydpi=medium-dpi, user-scalable=0" />
+<meta name="msapplication-tap-highlight" content="no" />
+<link rel="stylesheet" href="app/lib/onsen/css/onsenui.css"/>
+<link rel="stylesheet" href="app/lib/onsen/css/onsen-css-components.css"/>
+<script src="app/lib/onsen/js/angular/angular.js"></script>
+<script src="app/lib/onsen/js/onsenui.js"></script>
+<script type="text/javascript" src="cordova.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+<script src="js/jquery2.1.3.js"></script>
+<link rel="stylesheet" href="app/lib/onsen/css/onsen-css-components-blue-basic-theme.css">
+<link rel="stylesheet" href="app/list.css">
+    <script src="js/Patient.js" type="text/javascript"></script>
+<style>
+    a {
+        color: #000;
+
+        text-decoration: none;
+    }
+    h4{
+        margin-top: 10px;
+        margin-bottom: 0px;
+    }
+    h5{
+        font-weight: normal;
+    }
+</style>
+<title>Register Patient</title>
+<script>
+            var p = new Patient();
+            p.lastName = 'Tea';
+            p.firstName = 'Iced';
+            p.dateOfBirth = '10/10/2010';
+            $.ajax({
+                type: 'GET',
+                url: 'https://cloud.slaintehealthcare.com:6544/VitroMobileService/RegisterPatient',
+                data: {LastName: p.lastName,FirstName: p.firstName,DateOfBirth: p.dateOfBirth},
+                success: function(data){
+                    console.log(data);
+                    alert("success");
+                },
+                error: function(jqXHR, textStatus, errorThrown){
+                    console.log(jqXHR, textStatus, errorThrown);
+                    alert("fail");
+                }
+            });
+            </script>
+</head>
+<body>
+</body>

@@ -1,0 +1,18 @@
+
+<ons-page>
+    <ons-toolbar>
+        <div class="left"><ons-back-button><a href="tools.html">Back</a></ons-back-button></div>
+        <div class="center">Register Patient</div>
+        <div class="right"><ons-toolbar-button>Exit</ons-toolbar-button></div>
+    </ons-toolbar>
+
+    <div ons-if-platform="android">
+        <ons-button modifier="material" onclick="getPatientToUpload()">Upload Patient</ons-button>
+        <ons-button modifier="material" onclick="downloadPatients()">Download Patients</ons-button>
+        </div>
+
+    <div ons-if-platform="ios">
+        <ons-button onclick="getPatientToUpload()">Upload Patient</ons-button>
+        </div>
+
+</ons-page>

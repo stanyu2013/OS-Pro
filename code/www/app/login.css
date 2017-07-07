@@ -1,0 +1,38 @@
+@font-face{
+  font-family:"Roboto"; 
+  src: url("../fonts/Roboto.woff2") format("woff2"); 
+  font-weight: 400; 
+  font-style: normal;
+}
+
+body{
+  font-family: 'Roboto', sans-serif;
+  color: #024378;
+}
+
+.login-form {
+  text-align: center;
+  width: 80%;
+  margin: 15px auto 0;
+}
+
+input[type=email], input[type=password] {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  outline: none;
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+.login-button {
+  width: 100%;
+  margin: 0 auto;
+  text-decoration: none;
+}
+
+.forgot-password {
+  display: block;
+  margin: 8px auto 0 auto;
+  font-size: 14px;
+}

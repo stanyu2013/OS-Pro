@@ -1,0 +1,54 @@
+<ons-page>
+    <ons-toolbar>
+        <div class="left"><ons-back-button>Back</ons-back-button></div>
+        <div class="center">Patient Profile</div>
+        <div class="right">
+            <ons-icon value="Pre" icon="camera" style="vertical-align: -4px; font-size: 28px;" onclick="capturePhoto()"></ons-icon>
+            <ons-icon value="Post" icon="camera" style="vertical-align: -4px; font-size: 28px;" onclick="capturePhoto()"></ons-icon>
+        </div>
+    </ons-toolbar>
+
+    <ons-modal var="patientProfile">
+        <ons-icon icon="ion-load-c" spin="true"></ons-icon>
+        <br>
+        <br>Please wait.
+        <br>Getting patient from database
+    </ons-modal>
+
+    <div class="profile-card">
+        <img src="img/cleftlip.jpg" class="profile-image">
+        <div class="profile-name" id="PatientProfileName"></div>
+        <div class="profile-id" id="PatientProfileGender"></div>
+        <div class="profile-desc" id="PatientProfileDiagnosis"></div>
+      </div>
+
+    <ons-list modifier="inset" style="margin-top: 10px">
+
+    <div id ="reviewImage">
+
+    </div>
+
+    
+
+      <ons-list modifier="inset" style="margin-top: 10px">
+        <ons-list-item id="PatientProfileDOB">
+            <b>Date of Birth: </b><br>
+        </ons-list-item>
+
+        <ons-list-item id="PatientProfileAddress">
+            <b>Address: </b><br>
+        </ons-list-item>
+
+        <ons-list-item id="PatientProfileCountry">
+            <b>Country: </b><br>
+        </ons-list-item>
+
+        <ons-list-item id="PatientProfileGuardianInfo">
+            <b>Guardian Info: </b><br>Guardian Name:
+        </ons-list-item>
+
+    </ons-list>
+
+    <br>
+
+</ons-page>
